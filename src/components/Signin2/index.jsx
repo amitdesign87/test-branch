@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
+
 const Signin2 = () => {
   return (
     <section className="bg-tg-bg py-20 dark:bg-dark lg:py-[50px]">

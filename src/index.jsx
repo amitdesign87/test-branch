@@ -5,6 +5,7 @@ import App from './App';
 import Signin2 from './components/Signin2';
 import SignUp from './components/SignUp';
 import Table10 from './components/Table10';
+// import Logo from "./components/Logo";
 import Table11 from './components/Table11';
 import Table12 from './components/Table12';
 
