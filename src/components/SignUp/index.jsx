@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-
+import Logo from "../Logo";
+import { useNavigate } from "react-router-dom";
 const SignUP = () => {
+    const navigate = useNavigate();
+  
   return (
     <section className="bg-tg-bg py-20 dark:bg-dark lg:py-[50px]">
       <div className="container mx-auto">
-        <div className="flex justify-center h-11 mb-12"><img src={'/images/logo.png'} alt="Logo Image" /></div>
+        <div className="flex justify-center mb-10"> <Logo/></div>
         <div className="bg-white dark:bg-dark-2">
           <div className="flex flex-wrap items-stretch">
           <div className="w-full lg:w-1/2">
@@ -124,30 +127,29 @@ const SignUP = () => {
             </div>
             <div className="w-full lg:w-1/2">
               <div className="w-full px-6 py-14 sm:p-[70px] sm:px-12 xl:px-[90px]">
-                <h2 className="mb-10 text-[32px] font-bold text-dark dark:text-white">
+                <h2 className=" text-[32px] font-bold text-dark dark:text-white">
                 Sign up
                 </h2>
                 <form>
                   <InputBox
-                    labelTitle="Enter your email to continue"
+                    labelTitle="Enter your registered email to continue"
                     type="email"
                     name="email"
                   />
                  
                    
                   <div className="mt-8">
-                    <input
-                      type="submit"
-                      value="Next"
-                      className="w-full cursor-pointer rounded-md border border-primary bg-primary px-[14px] py-3 text-white transition hover:bg-opacity-90"
-                    />
+                    <button onClick={()=>navigate("/SetPassword")}
+                      type="button"
+                      className="w-full cursor-pointer rounded-md border border-primary bg-primary text-base py-5 text-white transition hover:bg-opacity-90"
+                    >Next</button>
                   </div>
                 </form>
                 <div className="flex flex-wrap justify-center">
                  
-                  <p className="mt-28 text-base text-body-color dark:text-dark-6">
+                  <p className="mt-12 text-base text-body-color dark:text-dark-6">
                     <span className="pr-0.5"> Already have an account?  </span>
-                    <Link  to={"./Signin2"} className="text-primary"> Sign In </Link>
+                    <Link  to={"/"} className="text-primary"> Sign In </Link>
                     
                   </p>
                 </div>
@@ -165,7 +167,7 @@ export default SignUP;
 
 const InputBox = ({ type, name, labelTitle }) => {
   return (
-    <div className="mt-8">
+    <div className="mt-5">
       <label className="mb-2.5 block text-base text-dark dark:text-white font-medium">
         {labelTitle}
       </label>

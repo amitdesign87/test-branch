@@ -6,7 +6,7 @@ const Navbar2 = () => {
   return (
     <header className="flex w-full items-center bg-white dark:bg-dark">
       <div className="container mx-auto">
-        <div className="relative -mx-4 flex items-center justify-between">
+        <div className="relative -mx-4 flex items-center justify-between h-16">
           <div className="order-last px-4 lg:order-first lg:w-6/12 xl:w-5/12 2xl:w-4/12">
             <button
               onClick={() => setOpen(!open)}
@@ -18,46 +18,21 @@ const Navbar2 = () => {
               <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
               <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
             </button>
-            <nav
-              className={`absolute right-4 top-full z-50 w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent ${
-                !open && "hidden"
-              } `}
-            >
-              <ul className="block lg:flex">
-                <ListItem NavLink="/#">Home</ListItem>
-                <ListItem NavLink="/#">Payment</ListItem>
-                <ListItem NavLink="/#">Features</ListItem>
-              </ul>
-            </nav>
+           
           </div>
-          <div className="px-4 lg:w-3/12 xl:w-3/12 2xl:w-4/12">
-            <a href="/#" className="block w-[150px] max-w-full py-5 lg:mx-auto">
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-primary.svg"
-                alt="logo"
-                className="dark:hidden"
-              />
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
-                alt="logo"
-                className="hidden dark:block"
-              />
-            </a>
-          </div>
+          
           <div className="w-full px-4 lg:w-3/12 xl:w-4/12 2xl:w-4/12">
             <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <a
-                href="/#"
-                className="px-6 py-2.5 text-base font-medium text-dark hover:text-primary dark:text-white"
-              >
-                Sign In
-              </a>
-              <a
-                href="/#"
-                className="whitespace-nowrap rounded-md bg-dark px-6 py-2.5 text-base font-medium text-white hover:bg-opacity-90 dark:bg-white dark:text-dark"
-              >
-                Sign Up
-              </a>
+              <div className="flex justify-center items-center gap-5">
+            <svg  width={24}
+                  height={24}
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"  stroke-width="1.5" stroke="currentColor" className="size-6 fill-gray">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+</svg>
+
+             <img className="w-10	h-10 rounded-full	" src={'/images/user-img.jpg'} alt="User Image" />
+             {/* <img src={'/images/user-img.jpg'} alt="Logo Image" /> */}
+             </div>
             </div>
           </div>
         </div>

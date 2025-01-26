@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
-import Navbar3 from './components/Navbar3';
+import Navbar2 from './components/Navbar2';
 import VerticalNavbar4 from './components/VerticalNavbar4';
 function App(props) {
 
@@ -13,9 +13,9 @@ function App(props) {
     <div className="flex h-screen">
       <VerticalNavbar4 />
       <div className="flex-1 flex flex-col">
-        <Navbar3 />
+        <Navbar2 />
         <div className="flex-1 bg-gray-100">
-          <div style={{ padding: 20 }}>
+          <div className='py-4'>
             <Outlet />
           </div>
         </div>

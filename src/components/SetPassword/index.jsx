@@ -2,16 +2,17 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import Logo from "../Logo";
 import { useNavigate } from "react-router-dom";
-const Signin2 = () => {
+
+const SetPassword = () => {
     const navigate = useNavigate();
   return (
     <section className="bg-tg-bg py-20 dark:bg-dark lg:py-[50px]">
       <div className="container mx-auto">
-        <div className="flex justify-center mb-10"><Logo/></div>
+        <div className="flex justify-center mb-10"> <Logo/></div>
         <div className="bg-white dark:bg-dark-2">
           <div className="flex flex-wrap items-stretch">
           <div className="w-full lg:w-1/2">
-              <div className="bg-[url('../src/assets/login-bg.jpg')] bg-center relative h-full w-full overflow-hidden  rounded-tl-lg rounded-bl-lg">
+              <div className="bg-[url('../src/assets/set-password.jpg')] bg-center relative h-full w-full overflow-hidden  rounded-tl-lg rounded-bl-lg lg:h-[600px]">
                 <div className="flex h-full items-end p-8 sm:p-14">
                  
                   <div>
@@ -126,41 +127,29 @@ const Signin2 = () => {
             </div>
             <div className="w-full lg:w-1/2">
               <div className="w-full px-6 py-14 sm:p-[70px] sm:px-12 xl:px-[90px]">
-                <h2 className="mb-10 text-[32px] font-bold text-dark dark:text-white">
-                  Sign In
+                <h2 className="text-[32px] font-bold text-dark dark:text-white">
+                Set Password?
                 </h2>
                 <form>
                   <InputBox
-                    labelTitle="Email Address"
-                    type="email"
-                    name="email"
+                    labelTitle="Enter new password"
+                    type="password"
+                    name="NewPassword"
                   />
                   <InputBox
-                    labelTitle="Password"
+                    labelTitle="Confirm new password"
                     type="password"
-                    name="password"
+                    name="ConfirmPassword"
                   />
-                  <div className="flex justify-end">
-                     <Link  to={"./ForgetPassword"} className="mt-5 mb-5 mr-3 inline-block text-base text-blue-600 hover:text-primary hover:underline dark:text-dark-6">  
-                     Forget Password? </Link>
-                     </div>
-                  
-                  <div className="mb-8">
-                  <button onClick={()=>navigate("./home")}
+                   <div className="flex mt-3 text-sm font-normal text-slate-500">Password must be 6-12 character long and combination of 1 uppercase, 1 lowecase, number a special character (@ - _ # $)</div>
+                  <div className="mt-8">
+                  <button onClick={()=>navigate("/Success")}
                       type="button"
-                      className="w-full cursor-pointer rounded-md border border-primary bg-primary text-base py-5 text-white transition hover:bg-opacity-90"
-                    >Sign In</button>
-                    
+                      className="w-full cursor-pointer rounded-md border border-primary bg-primary px-[14px] py-5 text-white transition hover:bg-opacity-90"
+                    >Next</button>
                   </div>
                 </form>
-                <div className="flex flex-wrap justify-center">
-                 
-                  {/* <p className="mb-2 text-base text-body-color dark:text-dark-6">
-                    <span className="pr-0.5"> Don't have an account?  </span>
-                    <Link  to={"./SignUp"} className="text-primary"> Sign Up </Link>
-                    
-                  </p> */}
-                </div>
+                
               </div>
             </div>
             
@@ -171,11 +160,11 @@ const Signin2 = () => {
   );
 };
 
-export default Signin2;
+export default SetPassword;
 
 const InputBox = ({ type, name, labelTitle }) => {
   return (
-    <div className="mt-8">
+    <div className="mt-5">
       <label className="mb-2.5 block text-base text-dark dark:text-white font-medium">
         {labelTitle}
       </label>

@@ -3,16 +3,16 @@ import React from "react";
 const Pagination = () => {
   return (
     <>
-      <section className="bg-white py-20 dark:bg-dark">
+      <section className=" dark:bg-dark">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mb-12 inline-flex rounded-xl border border-stroke bg-white p-4 dark:border-dark-3 dark:bg-dark-2">
+            <div className="w-full px-4 flex justify-end">
+              <div className="mb-0 mt-5 inline-flex rounded-md shadow-md bg-white p-3 dark:border-dark-3 dark:bg-dark-2">
                 <ul className="-mx-[6px] flex items-center">
                   <li className="px-[6px]">
                     <a
                       href="/#"
-                      className="flex h-9 w-9 items-center justify-center rounded-md border border-stroke bg-transparent text-base text-body-color hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
+                      className="flex h-8 px-3 items-center justify-center  text-base text-body-color hover:rounded hover:bg-primary hover:text-white dark:border-dark-3"
                     >
                       <span>
                         <svg
@@ -27,6 +27,7 @@ const Pagination = () => {
                           />
                         </svg>
                       </span>
+                      <span className="pl-3">Previous</span>
                     </a>
                   </li>
 
@@ -35,13 +36,14 @@ const Pagination = () => {
                   <PageLink count="3" pageSrc="/#" />
                   <PageLink count="4" pageSrc="/#" />
                   <PageLink count="5" pageSrc="/#" />
-                  <PageLink count="6" pageSrc="/#" />
+                  
 
                   <li className="px-[6px]">
                     <a
                       href="/#"
-                      className="flex h-9 w-9 items-center justify-center rounded-md border border-stroke bg-transparent text-base text-body-color hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
+                      className="flex h-8 px-3 items-center justify-center  text-base text-body-color hover:rounded hover:bg-primary hover:text-white dark:border-dark-3"
                     >
+                      <span className="pr-3">Next</span>
                       <span>
                         <svg
                           width={8}
@@ -55,6 +57,7 @@ const Pagination = () => {
                           />
                         </svg>
                       </span>
+                      
                     </a>
                   </li>
                 </ul>
@@ -75,7 +78,7 @@ const PageLink = ({ pageSrc, count }) => {
       <li className="px-[6px]">
         <a
           href={pageSrc}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-stroke bg-transparent text-base text-body-color hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
+          className="flex h-8 w-8 items-center justify-center bg-transparent text-base text-body-color hover:bg-primary hover:text-white dark:border-dark-3 hover:rounded"
         >
           {count}
         </a>
